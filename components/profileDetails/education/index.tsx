@@ -7,7 +7,7 @@ export default function Education() {
     <Styles.EducationWrapper id="education">
       <Header>Educational Qualification</Header>
 
-      <Image src={"/books.svg"} alt={"books"} width={300} height={300} />
+      <img src={"/books.png"} alt={""} width={250} height={250} />
 
       <div>
         <Styles.EducationBlock>

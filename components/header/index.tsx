@@ -1,11 +1,21 @@
 "use client";
 
-import { useTheme } from "next-themes";
+import { Dispatch, SetStateAction } from "react";
 import Image from "next/image";
 import * as Styles from "./styles";
 
-function Header({ isMobile }: { isMobile: boolean }) {
-  const { theme, setTheme } = useTheme();
+function Header({
+  isMobile,
+  theme,
+  setTheme,
+}: {
+  isMobile: boolean;
+  theme: string;
+  setTheme: Dispatch<SetStateAction<string>>;
+}) {
+
+  console.log("theme ", theme);
+  
 
   const clickHandler = (name: string) => {
     let element = document.getElementById(name);
@@ -31,23 +41,28 @@ function Header({ isMobile }: { isMobile: boolean }) {
           <span onClick={() => clickHandler("skills")}>Skills</span>
         </Styles.NavWrapper>
       )}
-      {theme === "dark" ? (
+      {theme === "light" && (
         <Image
-          style={{ cursor: 'pointer' }}
-          onClick={() => setTheme("light")}
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            setTheme("dark");
+          }}
           src={"/light.svg"}
           alt="light"
           width={30}
-          height={40}
+          height={30}
         />
-      ) : (
+      )}
+      {theme === "dark" && (
         <Image
-          style={{ cursor: 'pointer' }}
-          onClick={() => setTheme("dark")}
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            setTheme("light");
+          }}
           src={"/dark.svg"}
           alt="dark"
           width={30}
-          height={40}
+          height={30}
         />
       )}
     </Styles.HeaderWrapper>

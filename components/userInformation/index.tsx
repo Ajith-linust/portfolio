@@ -89,7 +89,7 @@ export default function UserInformation() {
       </Styles.LeftWrapper>
       <Styles.RightWrapper>
         <Image
-          src={"/developer.svg"}
+          src={"/developer.png"}
           alt={"developer"}
           width={500}
           height={500}

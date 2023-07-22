@@ -29,5 +29,5 @@ export const TextWrapper = styled.div`
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  color: var(--grey);
+  color: var(--text);
 `;

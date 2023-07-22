@@ -20,6 +20,9 @@ export const HeaderWrapper = styled.div`
             filter: drop-shadow(2px 4px 6px var(--secondary-color));
             z-index: 99999;
         }
+        > img:not(:first-child) {
+            cursor: pointer;
+        }
     }
 `;
 

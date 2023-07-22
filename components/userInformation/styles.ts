@@ -110,6 +110,7 @@ export const RightWrapper = styled.div`
 
     @media (max-width: 1200px) {
         img {
+            max-width: 380px;
             height: 380px;
             transform: translateY(-30px);
         }

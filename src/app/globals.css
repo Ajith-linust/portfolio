@@ -10,7 +10,21 @@
   --grey-shade-2: #484c52;
 }
 
+[data-theme="dark"] html {
+  color-scheme: dark;
+}
+
 @media (prefers-color-scheme: dark) {
+  :root {
+    --text: white;
+    --background-color: black;
+    --secondary-color: #0f0f0f;
+    --grey-shade-2: #484c52;
+    --grey-shade-1: #2c2c2c;
+  }
+}
+
+@media (color-scheme: dark) {
   :root {
     --text: white;
     --background-color: black;
