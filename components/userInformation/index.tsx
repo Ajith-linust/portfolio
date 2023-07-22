@@ -47,13 +47,13 @@ export default function UserInformation() {
           ></path>
         </svg>
         <p>
-          <span>FrontEnd</span> Web Developer
+          <span>{`FrontEnd`}</span> {`Web Developer`}
         </p>
-        <h1>Hey, I'm Ajithkumar Balakrishnan</h1>
+        <h1>{`Hey, I'm Ajithkumar Balakrishnan`}</h1>
         <article>
-          Result-oriented Professional with over 2.10 years of experience in ui
+          {`Result-oriented Professional with over 2.10 years of experience in ui
           development, React js, Next js, Typescript, Javascript, HTML, CSS,
-          Redux and styled-components (library).
+          Redux and styled-components (library).`}
         </article>
         <Button
           ripple

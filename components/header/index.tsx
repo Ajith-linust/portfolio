@@ -23,7 +23,7 @@ function Header({ isMobile }: { isMobile: boolean }) {
   return (
     <Styles.HeaderWrapper id="home">
       <Image src={"/logo.svg"} alt={"logo"} width={40} height={40} />
-      {!isMobile && window.innerWidth > 800 && (
+      {!isMobile && (
         <Styles.NavWrapper>
           <span onClick={() => clickHandler("home")}>Home</span>
           <span onClick={() => clickHandler("education")}>Education</span>

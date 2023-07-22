@@ -6,7 +6,7 @@ import { Header } from "../styles";
 export default function Companies() {
   return (
     <Styles.CompaniesWrapper id="companies">
-      <Header>Experience</Header>
+      <Header>{`Experience`}</Header>
       <Styles.CompaniesBlock>
         {companyDetails.map((data, index) => (
           <div key={data.name}>

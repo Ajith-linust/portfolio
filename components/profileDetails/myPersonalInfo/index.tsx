@@ -5,10 +5,10 @@ import * as Styles from "./styles";
 export default function MyPersonalInfo() {
   return (
     <Styles.MyPersonalInfoWrapper id="personal-info">
-      <Header>My Personal Information</Header>
+      <Header>{`My Personal Information`}</Header>
       <div>
         {personalInfo.map((data) => (
-          <Styles.TextWrapper>
+          <Styles.TextWrapper key={data.text}>
             <Image
               src={data.icon}
               alt={data.text}

@@ -5,10 +5,10 @@ import { Header } from "../styles";
 export default function Skills() {
   return (
     <Styles.SkillsWrapper id="skills">
-      <Header>I'm Specialized In</Header>
+      <Header>{`I'm Specialized In`}</Header>
       <div>
         {data.map((d) => (
-          <Styles.LanguageWrapper>
+          <Styles.LanguageWrapper key={d.name}>
             <Image src={d.icon} alt={d.name} width={60} height={60} />
             <div>
               <label>{d.name}</label>
