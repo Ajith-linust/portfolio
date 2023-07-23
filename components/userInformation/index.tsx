@@ -51,7 +51,7 @@ export default function UserInformation() {
         </p>
         <h1>{`Hey, I'm Ajithkumar Balakrishnan`}</h1>
         <article>
-          {`Result-oriented Professional with over 2.10 years of experience in ui
+          {`Results-oriented Professional with almost 3 years of experience in ui
           development, React js, Next js, Typescript, Javascript, HTML, CSS,
           Redux and styled-components (library).`}
         </article>

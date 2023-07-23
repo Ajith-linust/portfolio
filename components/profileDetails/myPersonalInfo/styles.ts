@@ -9,7 +9,7 @@ export const MyPersonalInfoWrapper = styled.div`
     margin-bottom: 40px;
   }
 
-  > div {
+  > div:first-of-type {
     gap: 20px;
     display: flex;
     flex-direction: column;
@@ -30,4 +30,18 @@ export const TextWrapper = styled.div`
   gap: 10px;
   font-size: 14px;
   color: var(--text);
+`;
+
+export const CreditWrapper = styled.div`
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--grey);
+
+    img {
+      transform: translate(4px, 4px);
+    }
 `;

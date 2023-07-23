@@ -30,7 +30,7 @@ export const LanguageWrapper = styled.div`
   gap: 14px 30px;
 
   img {
-    filter: drop-shadow(0px 8px 16px var(--grey-shade-1));
+    filter: drop-shadow(0px 8px 25px var(--grey-shade-1));
     border-radius: 8px;
   }
 
@@ -38,6 +38,7 @@ export const LanguageWrapper = styled.div`
     display: block;
     font-size: 14px;
     font-weight: bold;
+    margin-bottom: 4px;
   }
 
   span {
@@ -45,7 +46,7 @@ export const LanguageWrapper = styled.div`
     color: var(--grey);
   }
 
-  span span {
-    font-weight: 700;
+  > div > span span {
+    font-weight: bold;
   }
 `;

@@ -19,6 +19,17 @@ export default function MyPersonalInfo() {
           </Styles.TextWrapper>
         ))}
       </div>
+      <Styles.CreditWrapper>
+        <p>Built by Ajithkumar
+          <Image 
+            src={'/joy.svg'}
+            alt="joy"
+            width={20}
+            height={20}
+          />
+        </p>
+        <p>Design inspired by Hasnur Alam Ujjol (dribbble)</p>
+      </Styles.CreditWrapper>
     </Styles.MyPersonalInfoWrapper>
   );
 }

@@ -9,12 +9,28 @@ export default function Skills() {
       <div>
         {data.map((d) => (
           <Styles.LanguageWrapper key={d.name}>
-            <Image src={d.icon} alt={d.name} width={60} height={60} />
+            <Image
+              style={
+                d.name === "JavaScript" || d.name === "Typescript"
+                  ? undefined
+                  : {
+                      background: "white",
+                      padding: "5px",
+                    }
+              }
+              src={d.icon}
+              alt={d.name}
+              width={60}
+              height={60}
+            />
             <div>
               <label>{d.name}</label>
               <span>
-                I am a profressional with {d.name} with 
-                <span>{d.name === "Next JS" ? " 6 months" : " 2.10 years"}</span> of experience
+                Results-oriented Professional with {" "}
+                <span>
+                  {d.name === "Next JS" ? "6 months" : "almost 3 years"}
+                </span>{" "}
+                of experience
               </span>
             </div>
           </Styles.LanguageWrapper>

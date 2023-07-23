@@ -1,28 +1,29 @@
 export const companyDetails = [
   {
     name: "Prasad corporation private ltd",
-    icon: '/prasadLogo.png',
-    projects: [{
-      name: "Vault management system (VMS)",
-      description: `Vault Management System - React JS (September 2022 - June 2023)
+    icon: "/prasadLogo.png",
+    projects: [
+      {
+        name: "Vault management system (VMS)",
+        description: `Vault Management System - React JS (September 2022 - June 2023)
                 A platform to take control of physical media assets stored in archive. The
                 system helps user locate assets in their vault in no time, tracks movement
                 within the vault and outside, and provides customized production workflow
                 management.`,
-      achievements: [
-        `worked on creating reusable react components.`,
-        `handled complex logic FE tasks efficiently`,
-        `Posed as a critical resource in the project and received`,
-        `appreciation from Manager for quick fixing of production bugs`,
-        `Supporting and Mentoring Junior developers`,
-        `Did Code Review & approval for peers`,
-        `Worked on POC's for newly introduced features in the project`,
-      ],
-    }],
+        achievements: [
+          `worked on creating reusable react components.`,
+          `handled complex logic FE tasks efficiently`,
+          `Posed as a critical resource in the project and received appreciation from Manager for quick fixing of production bugs`,
+          `Supporting and Mentoring Junior developers`,
+          `Did Code Review & approval for peers`,
+          `Worked on POC's for newly introduced features in the project`,
+        ],
+      },
+    ],
   },
   {
     name: "Haldio technologies",
-    icon: '/haldio.svg',
+    icon: "/haldio.svg",
     projects: [
       {
         name: `Adshiker - Next JS, Redux, Styled components (2021 Oct -
