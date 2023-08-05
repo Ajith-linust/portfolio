@@ -32,15 +32,16 @@ function Header({
       {!isMobile && (
         <Styles.NavWrapper>
           <span onClick={() => clickHandler("home")}>Home</span>
-          <span onClick={() => clickHandler("education")}>Education</span>
           <span onClick={() => clickHandler("companies")}>Experience</span>
           <span onClick={() => clickHandler("skills")}>Skills</span>
+          <span onClick={() => clickHandler("education")}>Education</span>
         </Styles.NavWrapper>
       )}
       {theme === "light" && (
         <Image
           style={{ cursor: "pointer" }}
           onClick={() => {
+            localStorage.setItem("theme", 'dark');
             setTheme("dark");
           }}
           src={"/light.svg"}
@@ -53,6 +54,7 @@ function Header({
         <Image
           style={{ cursor: "pointer" }}
           onClick={() => {
+            localStorage.setItem("theme", 'light');
             setTheme("light");
           }}
           src={"/dark.svg"}

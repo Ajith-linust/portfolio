@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle<{
 }>`
 ${(p) => p.mode === 'dark' && `
       :root {
+        --bubble: #8b8b8b3d;
         --text: white;
         --background-color: black;
         --secondary-color: #0f0f0f;
@@ -19,6 +20,7 @@ ${(p) => p.mode === 'dark' && `
 `};
 ${(p) => p.mode === 'light' && `
       :root {
+        --bubble: #c4c4c43d;
         --text: black;
         --background-color: white;
         --blue: #283BDA;

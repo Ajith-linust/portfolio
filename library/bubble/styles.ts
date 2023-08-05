@@ -4,7 +4,7 @@ export const BubbleWrapper = styled.div`
     position: fixed;
     width: 100px;
     height: 100px;
-    background: radial-gradient(transparent, #eeeeee3d 130%);
+    background: radial-gradient(transparent, var(--bubble) 130%);
     border-radius: 100px;
     transition: all 1.2s;
     z-index: 1100;

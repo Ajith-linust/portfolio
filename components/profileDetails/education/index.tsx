@@ -45,7 +45,7 @@ export default function Education() {
 
       <Styles.EducationBlock ref={educationBlock}>
         {educationsDetails.map((d) => (
-          <div>
+          <div key={d.name}>
             <p>{d.name}</p>
             <label>{d.course}</label>
             <article>
