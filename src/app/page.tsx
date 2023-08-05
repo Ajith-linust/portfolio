@@ -45,7 +45,19 @@ function Home() {
 
       span.style.background = colors[Math.floor(Math.random() * 5)];
 
-      span.style.top = `${Math.random() * document.body.scrollHeight + 100}px`;
+      let height = document.body.scrollHeight + span.clientHeight;
+
+      let top = Math.random() * height;
+
+      if (Math.random() * height < 0) {
+        top += 100;
+      } else if (Math.random() * height > document.body.scrollHeight) {
+        top -= 100;
+      } else {
+        top = Math.random() * document.body.scrollHeight;
+      }
+
+      span.style.top = `${top}px`;
 
       if (i % 2 === 0) {
         span.style.left = `${Math.random() * 200}px`;
@@ -58,7 +70,7 @@ function Home() {
   }, [theme]);
 
   useEffect(() => {
-    let mode = localStorage.getItem("theme") || 'light';
+    let mode = localStorage.getItem("theme") || "light";
 
     if (mode === "dark") {
       setTheme("dark");
@@ -82,13 +94,13 @@ function Home() {
     return () => window.removeEventListener("resize", resizeHandler);
   }, []);
 
-  if(theme === '') return <></>;
+  if (theme === "") return <></>;
 
   return (
     <ThemeProvider theme={{ theme }}>
       <GlobalStyle mode={theme || "light"} />
       <Styles.PortfolioWrapper ref={portfolioWrapperRef}>
-        <Bubble />
+        {!isMobile && <Bubble />}
         <Header theme={theme} setTheme={setTheme} isMobile={isMobile} />
         <UserInformation />
         <CompanyDetails />
