@@ -1,11 +1,24 @@
+import { useRef } from "react";
 import Image from "next/image";
-import { Header } from "../styles";
+import useReveal from "hooks/useReveal";
+import { TitleHeader } from "@/library/header";
 import * as Styles from "./styles";
 
 export default function MyPersonalInfo() {
+  const personalInfoRef = useRef<HTMLDivElement>(null);
+
+  useReveal(
+    personalInfoRef,
+    (isInteract: boolean, elem) => {
+      if (isInteract) elem.classList.add("reveal-info");
+    },
+    true
+  );
+
   return (
-    <Styles.MyPersonalInfoWrapper id="personal-info">
-      <Header>{`My Personal Information`}</Header>
+    <Styles.MyPersonalInfoWrapper ref={personalInfoRef} id="personal-info">
+      <TitleHeader headerText = "My Personal Information" />
+
       <div>
         {personalInfo.map((data) => (
           <Styles.TextWrapper key={data.text}>

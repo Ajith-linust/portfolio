@@ -8,6 +8,10 @@
   --grey: grey;
   --grey-shade-1: lightgrey;
   --grey-shade-2: #484c52;
+  --shadow1: #f3f3f3;
+  --shadow2: #ededed;
+  --cardBg: #fff;
+  --cardBorder: #fff;
 }
 
 [data-theme="dark"] html {
@@ -21,6 +25,10 @@
     --secondary-color: #0f0f0f;
     --grey-shade-2: #484c52;
     --grey-shade-1: #2c2c2c;
+    --shadow1: #0b0b0b;
+    --shadow2: #080808;
+    --cardBg: #090909;
+    --cardBorder: #000;
   }
 }
 
@@ -58,6 +66,15 @@ a {
 
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
+}
+
+.bubble-design {
+  position: absolute;
+  z-index: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  filter: blur(20px);
 }
 
 @media (prefers-color-scheme: dark) {

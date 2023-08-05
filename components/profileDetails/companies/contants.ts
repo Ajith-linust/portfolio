@@ -26,8 +26,7 @@ export const companyDetails = [
     icon: "/haldio.svg",
     projects: [
       {
-        name: `Adshiker - Next JS, Redux, Styled components (2021 Oct -
-            2022 Aug)`,
+        name: `Adshiker`,
         description: `A platform for connecting Influencers and Brands for creating and
       publishing ads and an in-house Marketplace.`,
         achievements: [
@@ -43,7 +42,7 @@ export const companyDetails = [
         ],
       },
       {
-        name: `AskQ - ReactJS, Redux, Styled components (2021 Feb - 2021 Nov)`,
+        name: `AskQ`,
         description: `A platform similar to Quora, specifically designed for students where they
         can create communities with their classmates, friends, seniors, etc, and
         ask questions and get relevant answers around categories of a student.`,
@@ -55,7 +54,7 @@ export const companyDetails = [
         ],
       },
       {
-        name: `Kuweek - ReactJS, Styled components (2020 Aug - 2021 Feb)`,
+        name: `Kuweek`,
         description: `A platform for improving spoken English skills. We have built an algorithm
         to convert the speech to text and assess the speech with various
         parameters at each level, helping the user to get real-time results and

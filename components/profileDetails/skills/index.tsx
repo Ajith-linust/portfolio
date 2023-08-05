@@ -1,12 +1,27 @@
+import { useRef } from "react";
 import Image from "next/image";
+import useReveal from "hooks/useReveal";
+import { TitleHeader } from "@/library/header";
 import * as Styles from "./styles";
-import { Header } from "../styles";
 
 export default function Skills() {
+  const skillsRef = useRef<HTMLDivElement | null>(null);
+
+  useReveal(
+    skillsRef,
+    (isInteract: boolean, elem) => {
+      console.log("eleme ", elem);
+      
+      if (isInteract) elem.classList.add("skills-block");
+    },
+    true
+  );
+
   return (
     <Styles.SkillsWrapper id="skills">
-      <Header>{`I'm Specialized In`}</Header>
-      <div>
+      <TitleHeader headerText = "I'm Specialized In" />
+
+      <div ref={skillsRef}>
         {data.map((d) => (
           <Styles.LanguageWrapper key={d.name}>
             <Image

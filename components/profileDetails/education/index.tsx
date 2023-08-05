@@ -1,51 +1,65 @@
 import Image from "next/image";
+import { useRef } from "react";
+import useReveal from "hooks/useReveal";
+import { TitleHeader } from "@/library/header";
 import * as Styles from "./styles";
-import { Header } from "../styles";
 
 export default function Education() {
+  const educationBlock = useRef<HTMLDivElement | null>(null);
+
+  useReveal(
+    educationBlock,
+    (isInteract: boolean, elem) => {
+      if (isInteract) elem.classList.add("reveal");
+    },
+    true
+  );
+
+  let educationsDetails = [
+    {
+      name: "Sns college of technology",
+      course: "Computer Science & Engineering",
+      graduateText: "I graduated my course with",
+      score: "8.2 CGPA",
+      image: "joy",
+    },
+    {
+      name: "Shri k.k naidu hr.sec.school",
+      course: "Computer Science",
+      graduateText: "I graduated my 12th grade with",
+      score: "63%",
+      image: "cry",
+    },
+    {
+      name: "Sns college of technology",
+      course: "( General )",
+      graduateText: "I graduated my 10th grade with",
+      score: "85%",
+      image: "star",
+    },
+  ];
+
   return (
     <Styles.EducationWrapper id="education">
-      <Header>Educational Qualification</Header>
+      <TitleHeader headerText="Educational Qualification" />
 
-      <img src={"/books.png"} alt={""} width={250} height={250} />
-
-      <div>
-        <Styles.EducationBlock>
+      <Styles.EducationBlock ref={educationBlock}>
+        {educationsDetails.map((d) => (
           <div>
-            <p>Sns college of technology</p>
-            <label>Computer science and engineering</label>
+            <p>{d.name}</p>
+            <label>{d.course}</label>
             <article>
-              I graduated my course with{" "}
-              <span>
-                8.2 CGPA{" "}
-                <Image src={"/joy.svg"} alt={"joy"} width={20} height={20} />
-              </span>
+              {d.graduateText} <span>{d.score}</span>
             </article>
+            <Image
+              src={`/${d.image}.svg`}
+              alt={d.image}
+              width={50}
+              height={50}
+            />
           </div>
-          <div>
-            <p>Shri k.k naidu hr.sec.school</p>
-            <label>Computer science</label>
-            <article>
-              I graduated my 12<sup>th</sup> grade with{" "}
-              <span>
-                63%
-                <Image src={"/cry.svg"} alt={"cry"} width={20} height={20} />
-              </span>
-            </article>
-          </div>
-          <div>
-            <p>Shri k.k naidu hr.sec.school</p>
-            <label>( General )</label>
-            <article>
-              I graduated my 10<sup>th</sup> grade with{" "}
-              <span>
-                85%{" "}
-                <Image src={"/star.svg"} alt={"star"} width={20} height={20} />
-              </span>
-            </article>
-          </div>
-        </Styles.EducationBlock>
-      </div>
+        ))}
+      </Styles.EducationBlock>
     </Styles.EducationWrapper>
   );
 }

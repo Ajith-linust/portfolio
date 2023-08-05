@@ -13,10 +13,6 @@ function Header({
   theme: string;
   setTheme: Dispatch<SetStateAction<string>>;
 }) {
-
-  console.log("theme ", theme);
-  
-
   const clickHandler = (name: string) => {
     let element = document.getElementById(name);
 

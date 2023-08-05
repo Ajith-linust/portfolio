@@ -31,13 +31,14 @@ export const ProjectWrapper = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   perspective-origin: 300px;
+  opacity: 0;
+  transition: opacity 1s ease;
 `;
 
 export const ProjectBlock = styled.div`
   padding: 20px;
   border-radius: 12px;
-  background: var(--secondary-color);
-  /* border: 1px solid #eee; */
+  border: 1px solid var(--grey-shade-1);
   transform-origin: center top;
   transform-style: preserve-3d;
   transition: all 0.3s;
@@ -45,7 +46,7 @@ export const ProjectBlock = styled.div`
 
   p {
     font-size: 14px;
-    color: #f25f2c;
+    color: #2d9bf4;
     font-weight: 600;
   }
 
@@ -65,10 +66,6 @@ export const ProjectBlock = styled.div`
   }
   li::marker {
     color: #f25f2c;
-  }
-
-  &:hover {
-    transform: translate(0px, -10px);
   }
 
   &:after {

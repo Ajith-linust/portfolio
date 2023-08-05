@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import { ButtonTypes, SocialButtonTypes } from "./constants";
+import { ButtonTypes } from "./constants";
 
 interface IButtonStyleProps {
   styles?: string;

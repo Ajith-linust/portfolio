@@ -10,7 +10,7 @@ export const MobileNavWrapper = styled.div`
     padding: 20px 30px;
     position: sticky;
     bottom: 0px;
-    z-index: 9999;
+    z-index: 1099;
 
     svg {
         width: 25px;

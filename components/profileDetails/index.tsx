@@ -7,9 +7,9 @@ import * as Styles from './styles';
 export default function CompanyDetails() {
     return (
         <Styles.CompanyDetailsWrapper>
-            <Education />
             <Companies />
             <Skills />
+            <Education />
             <MyPersonalInfo />
         </Styles.CompanyDetailsWrapper>
     );

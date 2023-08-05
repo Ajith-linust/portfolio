@@ -11,6 +11,10 @@ ${(p) => p.mode === 'dark' && `
         --secondary-color: #0f0f0f;
         --grey-shade-2: #484c52;
         --grey-shade-1: #2c2c2c;
+        --shadow1: #0b0b0b;
+        --shadow2: #080808;
+        --cardBg: #090909;
+        --cardBorder: #000;
       }
 `};
 ${(p) => p.mode === 'light' && `
@@ -22,6 +26,10 @@ ${(p) => p.mode === 'light' && `
         --grey: grey;
         --grey-shade-1: lightgrey;
         --grey-shade-2: #484c52;
+        --shadow1: #f3f3f3;
+        --shadow2: #ededed;
+        --cardBg: #fff;
+        --cardBorder: #fff;
       }
 `};
 `
@@ -29,4 +37,5 @@ ${(p) => p.mode === 'light' && `
 export const PortfolioWrapper = styled.div`
     max-width: 1600px;
     margin: auto;
+    z-index: 1;
 `;

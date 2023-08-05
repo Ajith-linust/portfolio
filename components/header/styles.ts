@@ -6,7 +6,7 @@ export const HeaderWrapper = styled.div`
     position: sticky;
     top: 0px;
     background: var(--background-color);
-    z-index: 10000;
+    z-index: 1002;
     padding: 24px 70px;
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@ export const HeaderWrapper = styled.div`
 
         > img {
             filter: drop-shadow(2px 4px 6px var(--secondary-color));
-            z-index: 99999;
+            z-index: 1003;
         }
         > img:not(:first-child) {
             cursor: pointer;

@@ -6,7 +6,7 @@ export const UserInfoWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     align-items: center;
     grid-gap: 30px;
-    height: calc(100vh - 216px);
+    height: calc(100vh - 170px);
     overflow: hidden;
 
     @media (max-width: 1200px) {
@@ -14,6 +14,7 @@ export const UserInfoWrapper = styled.div`
         height: auto;
     }
 `;
+
 export const LeftWrapper = styled.div`
     padding: 20px 70px;
     position: relative;

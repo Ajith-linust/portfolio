@@ -93,6 +93,7 @@ export default function UserInformation() {
           alt={"developer"}
           width={500}
           height={500}
+          priority
         />
         <p>UI Developer</p>
       </Styles.RightWrapper>
