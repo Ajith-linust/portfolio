@@ -58,7 +58,7 @@ function Home() {
   }, [theme]);
 
   useEffect(() => {
-    let mode = localStorage.getItem("theme");
+    let mode = localStorage.getItem("theme") || 'light';
 
     if (mode === "dark") {
       setTheme("dark");
