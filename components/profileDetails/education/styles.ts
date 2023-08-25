@@ -11,7 +11,6 @@ export const EducationBlock = styled.div`
     display: grid;
     gap: 40px;
     max-width: 1200px;
-    /* opacity: 0; */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
     &.reveal > div {
