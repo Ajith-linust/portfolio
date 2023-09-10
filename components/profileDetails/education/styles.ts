@@ -12,6 +12,7 @@ export const EducationBlock = styled.div`
     gap: 40px;
     max-width: 1200px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: auto;
 
     &.reveal > div {
         animation: reveal 1s ease forwards;
