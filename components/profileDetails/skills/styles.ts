@@ -20,7 +20,6 @@ export const SkillsWrapper = styled.div`
   }
 
   > div > div {
-    opacity: 0;
     justify-self: center;
   }
 

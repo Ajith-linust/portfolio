@@ -28,7 +28,6 @@ export const EducationBlock = styled.div`
         border: 5px solid var(--cardBorder);
         background: var(--cardBg);
         box-shadow: -12px -12px 36px var(--shadow1), 12px 12px 36px var(--shadow2);
-        opacity: 0;
     }
 
     img {

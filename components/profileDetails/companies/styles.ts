@@ -31,7 +31,6 @@ export const ProjectWrapper = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   perspective-origin: 300px;
-  opacity: 0;
   transition: opacity 1s ease;
 `;
 

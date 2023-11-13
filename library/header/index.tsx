@@ -1,7 +1,7 @@
 import { convertStringToArray } from "@/app/utils";
 import useReveal from "hooks/useReveal";
 import { useEffect, useRef } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export function TitleHeader({ headerText }: { headerText: string }) {
   const headerRef = useRef<HTMLDivElement | null>(null);
@@ -42,7 +42,6 @@ export function TitleHeader({ headerText }: { headerText: string }) {
     span {
       min-width: 9px;
       display: block;
-      opacity: 0;
     }
 
     @media (max-width: 800px) {

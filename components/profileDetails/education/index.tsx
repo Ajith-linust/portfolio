@@ -1,19 +1,8 @@
 import Image from "next/image";
-import { useRef } from "react";
-import useReveal from "hooks/useReveal";
 import { TitleHeader } from "@/library/header";
 import * as Styles from "./styles";
 
 export default function Education() {
-  const educationBlock = useRef<HTMLDivElement | null>(null);
-
-  useReveal(
-    educationBlock,
-    (isInteract: boolean, elem) => {
-      if (isInteract) elem.classList.add("reveal");
-    },
-    true
-  );
 
   let educationsDetails = [
     {
@@ -43,7 +32,7 @@ export default function Education() {
     <Styles.EducationWrapper id="education">
       <TitleHeader headerText="Educational Qualification" />
 
-      <Styles.EducationBlock ref={educationBlock}>
+      <Styles.EducationBlock>
         {educationsDetails.map((d) => (
           <div key={d.name}>
             <p>{d.name}</p>
