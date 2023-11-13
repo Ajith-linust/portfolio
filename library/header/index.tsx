@@ -29,22 +29,6 @@ export function TitleHeader({ headerText }: { headerText: string }) {
   return <Header ref={headerRef} textLength={headerText.length}></Header>;
 }
 
-function createCSS(length: number) {
-    let styles = "";
-  
-    for (let i = 1; i <= length; i += 1) {
-      styles += `
-           span:nth-child(${i}) {
-             animation-delay: ${i / length}s !important;
-           }
-         `;
-    }
-  
-    return css`
-      ${styles}
-    `;
-  }
-  
   export const Header = styled.h1<{ textLength: number }>`
     margin-bottom: 150px;
     font-size: 2em;
@@ -55,29 +39,12 @@ function createCSS(length: number) {
     display: flex;
     justify-content: center;
   
-    ${(p) => createCSS(p.textLength)};
-  
-    &.reveal span {
-      animation: reveal-header .4s ease forwards;
-    }
-  
     span {
       min-width: 9px;
       display: block;
       opacity: 0;
     }
-  
-    @keyframes reveal-header {
-      0% {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0px);
-      }
-    }
-  
+
     @media (max-width: 800px) {
       grid-column: 1 / 2;
     }

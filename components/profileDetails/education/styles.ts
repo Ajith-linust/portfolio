@@ -14,17 +14,6 @@ export const EducationBlock = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin: auto;
 
-    &.reveal > div {
-        animation: reveal 1s ease forwards;
-    }
-
-    &.reveal > div:nth-child(2) {
-        animation-delay: 0.3s;
-    }
-    &.reveal > div:nth-child(3) {
-        animation-delay: 0.6s;
-    }
-
     > div {
         width: 300px;
         height: 300px;
@@ -67,14 +56,5 @@ export const EducationBlock = styled.div`
 
     article span {
         color: var(--text);
-    }
-
-    @keyframes reveal {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
     }
 `;

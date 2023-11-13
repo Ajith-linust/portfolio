@@ -1,22 +1,6 @@
 "use client";
 
-import { css, styled } from "styled-components";
-
-function createCSS(length: number) {
-  let styles = "";
-
-  for (let i = 1; i <= length; i += 1) {
-    styles += `
-        .skills-block > div:nth-child(${i}) {
-           animation-delay: ${i / length}s !important;
-         }
-       `;
-  }
-
-  return css`
-    ${styles}
-  `;
-}
+import { styled } from "styled-components";
 
 export const SkillsWrapper = styled.div`
   padding-top: 280px;
@@ -38,21 +22,6 @@ export const SkillsWrapper = styled.div`
   > div > div {
     opacity: 0;
     justify-self: center;
-  }
-
-  .skills-block > div {
-    animation: reveal-skills 1s ease forwards;
-  }
-
-  ${createCSS(8)};
-
-  @keyframes reveal-skills {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
 
   @media (max-width: 800px) {

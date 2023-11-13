@@ -5,11 +5,6 @@ import { styled } from "styled-components";
 export const MyPersonalInfoWrapper = styled.div`
   padding-block: 200px 80px;
 
-  &.reveal-info > * {
-    animation: reveal-info 1s ease forwards;
-    opacity: 0;
-  }
-
   > h1 {
     margin-bottom: 40px;
   }
@@ -21,14 +16,6 @@ export const MyPersonalInfoWrapper = styled.div`
     align-items: flex-start;
     margin: auto;
     width: max-content;
-  }
-
-  @keyframes reveal-info {
-    0% {
-      opacity: 0;
-    } 100% {
-      opacity: 1;
-    }
   }
 
   @media (max-width: 800px) {
